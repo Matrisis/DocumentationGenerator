@@ -1,0 +1,45 @@
+# Introduction
+The DocumentationGenerator project is a Python application designed to automate the creation of documentation for a given GitHub repository. The project aims to provide a clear and efficient way to generate documentation, making it easier for developers to understand and contribute to the repository.
+
+## Purpose and Usage
+The DocumentationGenerator project consists of several components, including environment setup, repository cloning, documentation planning, and documentation creation. The project uses a modular design, configuration-based approach, and crew-based approach to manage the documentation flow.
+
+To use the project, users need to have Python 3.x installed and a GitHub repository set up. The project can be run by creating an instance of the `CreateDocumentationFlow` class and calling the `run` method:
+```python
+flow = CreateDocumentationFlow(state)
+flow.run()
+```
+
+## Components and Configurations
+The project has several key components, including:
+* `main.py`: The entry point of the application, responsible for setting up the environment and running the documentation flow.
+* `documentation_agents.yaml`: A configuration file defining the documentation agents used in the project.
+* `documentation_tasks.yaml`: A configuration file defining the documentation tasks used in the project.
+
+The relationships between these components can be visualized using the following mermaid art diagram:
+```mermaid
+graph LR
+    A[main.py] -->|uses|> B[documentation_agents.yaml]
+    A -->|uses|> C[documentation_tasks.yaml]
+    B -->|defines|> D[Documentation Agents]
+    C -->|defines|> E[Documentation Tasks]
+    D -->|run|> E
+```
+
+## Setup Instructions
+To set up the project, follow these steps:
+1. Install Python 3.x on your system.
+2. Clone the GitHub repository using the `clone_repo` method:
+```python
+flow.clone_repo()
+```
+3. Plan the documentation using the `plan_docs` method:
+```python
+plan = flow.plan_docs()
+```
+4. Create the documentation using the `create_docs` method:
+```python
+flow.create_docs(plan)
+```
+
+By following these steps and using the provided code examples, users can effectively use the DocumentationGenerator project to automate the creation of documentation for their GitHub repository.

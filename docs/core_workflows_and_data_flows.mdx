@@ -1,0 +1,71 @@
+# Core Workflows and Data Flows
+The DocumentationGenerator project is a Python application that automates the creation of documentation for a given GitHub repository. The project consists of several components, including environment setup, repository cloning, documentation planning, and documentation creation.
+
+## Introduction
+The DocumentationGenerator project is a Python application that automates the creation of documentation for a given GitHub repository. The project consists of several components, including environment setup, repository cloning, documentation planning, and documentation creation.
+
+## Environment Setup
+The environment setup workflow sets up the necessary environment variables and configuration for the script. This includes installing required dependencies and configuring the project settings.
+
+```plain
+pip install -r requirements.txt
+```
+
+## Repository Cloning
+The repository cloning workflow clones the given GitHub repository to a local directory. This is done using the git clone command.
+
+```plain
+git clone https://github.com/user/repository.git
+```
+
+## Documentation Planning
+The documentation planning workflow plans the documentation by analyzing the codebase and creating a plan for the documentation. This includes identifying the components and relationships between them.
+
+```markdown
+# Documentation plan
+## Components
+* Environment setup
+* Repository cloning
+* Documentation planning
+* Documentation creation
+## Relationships
+* Environment setup -> Repository cloning
+* Repository cloning -> Documentation planning
+* Documentation planning -> Documentation creation
+```
+
+## Documentation Creation
+The documentation creation workflow creates the documentation based on the plan, including drafting the documentation and reviewing it.
+
+```markdown
+# Documentation creation
+## Drafting
+* Write introduction
+* Write environment setup section
+* Write repository cloning section
+* Write documentation planning section
+* Write documentation creation section
+## Reviewing
+* Review introduction
+* Review environment setup section
+* Review repository cloning section
+* Review documentation planning section
+* Review documentation creation section
+```
+
+## Component Relationships
+The following mermaid diagram shows the relationships between the components:
+```mermaid
+graph LR
+    A[Environment Setup] -->|sets up|> B[Repository Cloning]
+    B -->|clones|> C[Documentation Planning]
+    C -->|plans|> D[Documentation Creation]
+    D -->|creates|> E[Documentation]
+```
+
+## Setup Instructions
+To set up the project, follow these steps:
+
+1. Install required dependencies: pip install -r requirements.txt
+2. Clone the GitHub repository: git clone https://github.com/user/repository.git
+3. Configure the project settings: cp .env.example .env

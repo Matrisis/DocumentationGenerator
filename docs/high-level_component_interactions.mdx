@@ -1,0 +1,77 @@
+# Introduction
+The DocumentationGenerator project is a Python application that automates the creation of documentation for a given GitHub repository. The project consists of several components, including environment setup, repository cloning, documentation planning, and documentation creation.
+
+## High-Level Component Interactions
+The high-level component interactions in the DocumentationGenerator project can be represented using the following mermaid diagram:
+```mermaid
+graph LR
+    A[CreateDocumentationFlow] -->|interacts with|> B[DocumentationState]
+    A -->|interacts with|> C[DocPlan]
+    A -->|interacts with|> D[DocItem]
+```
+The `CreateDocumentationFlow` class interacts with the `DocumentationState` class to manage the state of the documentation. It also interacts with the `DocPlan` class to plan the documentation and with the `DocItem` class to create the documentation.
+
+## Component Descriptions
+### CreateDocumentationFlow
+The `CreateDocumentationFlow` class is responsible for managing the documentation flow. It interacts with other components to create the documentation.
+
+### DocumentationState
+The `DocumentationState` class manages the state of the documentation.
+
+### DocPlan
+The `DocPlan` class is responsible for planning the documentation.
+
+### DocItem
+The `DocItem` class is responsible for creating the documentation.
+
+## Setup Instructions
+To set up the DocumentationGenerator project, follow these steps:
+
+1. Clone the GitHub repository.
+2. Install the required dependencies using `pip install -r requirements.txt`.
+3. Configure the documentation agents and tasks in the `config/documentation_agents.yaml` and `config/documentation_tasks.yaml` files.
+4. Configure the planner tasks and agents in the `config/planner_tasks.yaml` and `config/planner_agents.yaml` files.
+5. Run the `main.py` file to start the documentation generation process.
+
+## Code Examples
+The following code example shows how the `CreateDocumentationFlow` class interacts with the `DocumentationState` class:
+```python
+from documentation_state import DocumentationState
+
+class CreateDocumentationFlow:
+    def __init__(self):
+        self.documentation_state = DocumentationState()
+
+    def create_documentation(self):
+        # Interact with the DocumentationState class to manage the state of the documentation
+        self.documentation_state.update_state()
+        # Create the documentation
+        # ...
+```
+The following code example shows how the `CreateDocumentationFlow` class interacts with the `DocPlan` class:
+```python
+from doc_plan import DocPlan
+
+class CreateDocumentationFlow:
+    def __init__(self):
+        self.doc_plan = DocPlan()
+
+    def create_documentation(self):
+        # Interact with the DocPlan class to plan the documentation
+        self.doc_plan.plan_documentation()
+        # Create the documentation
+        # ...
+```
+The following code example shows how the `CreateDocumentationFlow` class interacts with the `DocItem` class:
+```python
+from doc_item import DocItem
+
+class CreateDocumentationFlow:
+    def __init__(self):
+        self.doc_item = DocItem()
+
+    def create_documentation(self):
+        # Interact with the DocItem class to create the documentation
+        self.doc_item.create_documentation()
+        # ...
+```
